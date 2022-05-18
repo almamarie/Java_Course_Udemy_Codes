@@ -37,7 +37,6 @@ public class Animal {
         return weight;
     }
 
-
     public void eat(){
         System.out.println("Animal.eat() called");
     }

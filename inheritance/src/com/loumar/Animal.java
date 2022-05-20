@@ -42,6 +42,10 @@ public class Animal {
     }
 
 
+    public void move(int speed){
+        System.out.println("Animal.move() is called\nAnimal is moving at speed " + speed);
+    }
+
     public void move(){
 
     }

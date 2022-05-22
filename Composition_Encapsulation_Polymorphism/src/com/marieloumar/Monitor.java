@@ -30,6 +30,7 @@ public class Monitor {
     }
 
     public void drawPixelAt(int x, int y, String color){
-        System.out.println("Drawing pixel at " + x + ", " + y);
+
+        System.out.println("Drawing pixel at " + x + ", " + y + " with color " + color);
     }
 }

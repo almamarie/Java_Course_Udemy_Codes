@@ -1,21 +1,26 @@
 package com.marieloumar;
 
+import com.loumar.challenge.*;
+
 public class Main {
 
     public static void main(String[] args){
-        Dimensions dimensions = new Dimensions(20, 20, 5);
-        Case theCase = new Case("220B", "Dell", "240", dimensions);
+
+        String name = "Master Bedroom";
+        Wall wall1 = new Wall("left");
+        Wall wall2 = new Wall("right");
+        Wall wall3 = new Wall("back");
+        Wall wall4 = new Wall("front");
+        Ceiling ceiling = new Ceiling(7, 7896);
+        Bed bed = new Bed("Neat", 4, 9, 4, 9);
+        Lamp lamp = new Lamp("Classic", true, 90);
+
+        Bedroom bedroom = new Bedroom(name, wall1, wall2, wall3, wall4, ceiling, bed, lamp);
+
+        System.out.println(bedroom.getLamp().getStyle());
+        bedroom.makeBed();
+        bedroom.getLamp().turnOn();
 
 
-        Monitor monitor = new Monitor("27inch Beast", "Acer", 27, new Resolution(2540, 1440));
-
-        Motherboard motherboard = new Motherboard("BJ-200", "Asus", 4, 6, "v2.44");
-
-        PC pc = new PC(theCase, monitor, motherboard);
-
-        System.out.println(pc.getMotherboard().getBios());
-        pc.getMonitor().drawPixelAt(8, 10, "Yellow");
-        pc.getMotherboard().loadProgram("Ubuntu 20.04");
-        pc.getTheCase().pressPowerButton();
     }
 }
